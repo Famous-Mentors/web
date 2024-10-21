@@ -1,15 +1,8 @@
 from openai import OpenAI
 import streamlit as st
 
-ENV = {}
-
-with open(".env", "r") as f:
-    for line in f:
-        k, v = line.split("=")
-        ENV[k] = v.removesuffix("\n")
-
-client = OpenAI(api_key=ENV["OPENAI_API"])
-assistant_id = ENV["ASSISTANT_ID"]
+client = OpenAI(api_key=st.secrets.get("OPENAI_API"))
+assistant_id = st.secrets.get("ASSISTANT_ID")
 
 st.title("MENTOR AI")
 
