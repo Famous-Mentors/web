@@ -35,7 +35,9 @@ def stream(run):
             yield i.data.delta.content[0].text.value
 
 
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input(
+    "Please provide a specific senario that you would help with?"
+):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
