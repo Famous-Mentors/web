@@ -4,14 +4,18 @@ import streamlit as st
 client = OpenAI(api_key=st.secrets.get("OPENAI_API"))
 assistant_id = st.secrets.get("ASSISTANT_ID")
 
-hide_main = """
-<style>
-#MainMenu {
-  visibility: hidden;
-}
-  </style>"""
-
-st.html(hide_main)
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.title("MENTOR AI")
 
