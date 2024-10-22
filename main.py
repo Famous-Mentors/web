@@ -4,6 +4,15 @@ import streamlit as st
 client = OpenAI(api_key=st.secrets.get("OPENAI_API"))
 assistant_id = st.secrets.get("ASSISTANT_ID")
 
+hide_main = """
+<style>
+#MainMenu {
+  visibility: hidden;
+}
+  </style>"""
+
+st.html(hide_main)
+
 st.title("MENTOR AI")
 
 st.caption(
