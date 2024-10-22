@@ -11,11 +11,11 @@ st.markdown(
             visibility: hidden;
             display: none;
         }
-        a._container_1yi6l_1 {
+        a ._container_1yi6l_1 {
             visibility: hidden;
             display: none;
         }
-        div._profileContainer_1yi6l_53 {
+        div ._profileContainer_1yi6l_53 {
             visibility: hidden;
             display: none;
         }
